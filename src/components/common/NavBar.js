@@ -3,7 +3,7 @@ import { Button, Nav, Navbar } from "react-bootstrap";
 
 const NavBar = () => {
   return (
-    <Navbar expand="lg" sticky="top">
+    <Navbar expand="lg" sticky="top" style={{ background: "#3cb371"}}>
       <Navbar.Brand href="#home">Project Name</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" className="bg-light" />
       <Navbar.Collapse id="basic-navbar-nav">

@@ -5,3 +5,52 @@
   letter-spacing: 0;
   color: #c1f4e0;
 }
+
+.button-container {
+  border-bottom: 1px solid silver;
+}
+
+.custom-button {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  color: silver !important;
+  box-shadow: none;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: .75rem;
+  margin-right: 30px;
+}
+
+.custom-button::after {
+  position: absolute;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  background-color: #06cc80;
+  content: "";
+  transition: width .15s ease-in-out;
+}
+
+.custom-button:hover, .custom-button:focus, .custom-button:active {
+ color: #000 !important; 
+ background-color: transparent !important;
+ border: none !important;
+ box-shadow: none !important;
+ font-weight: 500;
+}
+
+.custom-button:hover::after, .custom-button:focus::after {
+  width: 100%;
+  right: 0;
+}
+
+.custom-button::before {
+  display: block;
+  content: attr(title);
+  font-weight: bold;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
