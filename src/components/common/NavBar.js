@@ -1,5 +1,9 @@
 import React from "react";
-import { Button, Nav, Navbar } from "react-bootstrap";
+import {
+  Button,
+  Nav,
+  Navbar
+} from "react-bootstrap";
 
 const NavBar = () => {
   return (

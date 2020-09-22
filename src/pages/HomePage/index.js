@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { Container, Row, Col, Button, OverlayTrigger, Form, Popover } from "react-bootstrap";
-import Body from "../../components/homepage/Body";
-import CarouselImg from "../../components/homepage/CarouselImg";
-import "./index.css";
 import CopyButton from "../../components/homepage/CopyButton";
 import UploadButton from "../../components/homepage/UploadButton";
+import Body from "../../components/homepage/Body";
+import CarouselImg from "../../components/homepage/CarouselImg";
+import {
+  Container,
+  Row,
+  Col,
+  Button
+} from "react-bootstrap";
+import "./index.css";
+
 
 const HomePage = () => {
   const [ isText, setIsText ] = useState(true);

@@ -1,7 +1,14 @@
 import React from "react";
-import { Col, OverlayTrigger, Tooltip, Form, Popover } from "react-bootstrap";
-import { textObj, jsonObj } from '../../data/data';
 import copy from "copy-to-clipboard";
+import {
+  Col,
+  OverlayTrigger,
+  Tooltip
+} from "react-bootstrap";
+import {
+  textObj,
+  jsonObj
+} from '../../data/data';
 
 const CopyButton = ({ isText }) => {
   const handleClickCopyButton = () => {

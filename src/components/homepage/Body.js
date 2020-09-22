@@ -1,6 +1,6 @@
 import React from "react";
-import { Container } from "react-bootstrap";
 import ReactJson from "react-json-view";
+import { Container } from "react-bootstrap";
 import { jsonObj } from '../../data/data';
 
 const textObj = <><p>TODAY'S MENU!</p><p>BULGOGI</p><p>EGG BACON BURGER</p><p>&FRENCH FRIES</p><p>INFO.</p></>

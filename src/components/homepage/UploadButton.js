@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { Container, Col, OverlayTrigger, Form, Popover } from "react-bootstrap";
+import {
+  Container,
+  Col,
+  OverlayTrigger,
+  Form,
+  Popover
+} from "react-bootstrap";
 
 const UploadButton = ({ isText }) => {
   const [ fileName, setFileName ] = useState('');
