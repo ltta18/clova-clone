@@ -6,16 +6,23 @@
   color: #c1f4e0;
 }
 
+.try-it {
+  line-height: 20px;
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: .5px;
+}
+
 .button-container {
   border-bottom: 1px solid silver;
 }
 
-.custom-button {
+.custom-button, .body-button {
   position: relative;
-  background-color: transparent;
+  background-color: transparent !important;
   border: none;
   color: silver !important;
-  box-shadow: none;
+  box-shadow: none !important;
   padding-left: 0;
   padding-right: 0;
   padding-bottom: .75rem;
@@ -33,24 +40,62 @@
   transition: width .15s ease-in-out;
 }
 
-.custom-button:hover, .custom-button:focus, .custom-button:active {
+.custom-button:hover, .custom-button:focus, .custom-button:active, .body-button:hover, .body-button:focus, .body-button:active {
  color: #000 !important; 
  background-color: transparent !important;
  border: none !important;
  box-shadow: none !important;
  font-weight: 500;
+ outline: none;
 }
 
-.custom-button:hover::after, .custom-button:focus::after {
+.custom-button:hover::after, .custom-button:focus::after, .custom-button:active::after {
   width: 100%;
   right: 0;
 }
 
-.custom-button::before {
+.custom-button::before, .body-button::before {
   display: block;
   content: attr(title);
   font-weight: bold;
   height: 0;
   overflow: hidden;
   visibility: hidden;
+}
+
+.body-desc-text {
+  color: #000;
+  font-weight: 300;
+  letter-spacing: .5px;
+  line-height: 24px;
+}
+
+.home-body {
+  height: 300px;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+  width: auto;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: lightgrey; 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+background: lightgrey; 
+}
+
+.copy-icon {
+  background: url("../../img/copy.svg") no-repeat;
+  width: 2rem;
+  height: 2rem;
+}
+
+.copy-icon:hover {
+  background: url("../../img/copy-green.svg") no-repeat;
 }
