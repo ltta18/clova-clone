@@ -1,3 +1,5 @@
+export const textObj = "<p>TODAY'S MENU!</p><p>BULGOGI</p><p>EGG BACON BURGER</p><p>&FRENCH FRIES</p><p>INFO.</p>"
+
 export const jsonObj = {
     "meta": {
         "imageSize": {
