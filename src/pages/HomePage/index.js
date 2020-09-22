@@ -23,9 +23,16 @@ const HomePage = () => {
   return (
     <>
       {/* Logo */}
-      <Container className="position-relative" style={{ marginTop: '200px' }}>
+      <Container
+        className="position-relative"
+        style={{ marginTop: '200px' }}
+      >
         {/* <Image src="" /> */}
-        <div className="mx-auto text-center desc-text mb-5">We provide accurate results by reflecting a model optimized for each document as well as supporting various languages.</div>
+        <div
+          className="mx-auto text-center desc-text mb-5"
+        >
+          We provide accurate results by reflecting a model optimized for each document as well as supporting various languages.
+        </div>
       </Container>
 
       {/* Body Box */}
@@ -37,7 +44,7 @@ const HomePage = () => {
 
         {/* Category Button */}
         <Row className="mt-5 mb-4 button-container">
-          <Button id='defaultChecked' className="custom-button" title="General OCR" >General OCR</Button>
+          <Button id='defaultChecked' className="custom-button" title="General OCR">General OCR</Button>
           <Button className="custom-button" title="Receipts">Receipts</Button>
           <Button className="custom-button" title="Credit Cards">Credit Cards</Button>
           <Button className="custom-button" title="Business Licenses">Business Licenses</Button>
@@ -57,11 +64,29 @@ const HomePage = () => {
           </Col>
 
           {/* Text/Json */}
-          <Col className="pr-0" style={{ border: '1px solid silver', borderBottom: '0' }} sm={6}>
+          <Col
+            className="pr-0"
+            style={{ border: '1px solid silver', borderBottom: '0' }}
+            sm={6}
+          >
             {/* Button Box */}
-            <Row className="pt-3 pb-2 mr-0" style={{ borderBottom: '1px solid silver' }}>
-              <button id="defaultTextChecked" className="body-button pl-3" onClick={() => setIsText(true)} title="Text">Text</button>
-              <button className="body-button pl-3" onClick={() => setIsText(false)} title="Json">Json</button>
+            <Row
+              className="pt-3 pb-2 mr-0"
+              style={{ borderBottom: '1px solid silver' }}
+            >
+              <button 
+                id="defaultTextChecked"
+                className="body-button pl-3"
+                onClick={() => setIsText(true)} title="Text"
+              >
+                Text
+              </button>
+              <button
+                className="body-button pl-3"
+                onClick={() => setIsText(false)} title="Json"
+              >
+                Json
+              </button>
             </Row>
 
             {/* Content */}
