@@ -8,7 +8,7 @@ import {
 const NavBar = () => {
   return (
     <Navbar expand="lg" sticky="top" style={{ background: "#3cb371"}}>
-      <Navbar.Brand href="#home">Project Name</Navbar.Brand>
+      <Navbar.Brand href="#home" style={{ color: "#fff" }}>Clova Clone</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" className="bg-light" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto" pullRight>

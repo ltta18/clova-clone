@@ -12,9 +12,9 @@ import {
 } from '../../data/data';
 import './CopyButton.css';
 
-const CopyButton = ({ isText }) => {
+const CopyButton = ({ displayTab }) => {
   const handleClickCopyButton = () => {
-    const copyText = isText ? textObj : JSON.stringify(jsonObj);
+    const copyText = displayTab === 'text' ? textObj : JSON.stringify(jsonObj);
     copy(copyText);
 
     const flashMessage = document.getElementsByClassName('flash-copy-message')[0];

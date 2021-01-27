@@ -13,19 +13,27 @@ import "./index.css";
 
 
 const HomePage = () => {
-  const [ isText, setIsText ] = useState(true);
+  const [ displayTab, setDisplayTab ] = useState('text')
+  const [ tabChoice, setTabChoice ] = useState('ocr')
 
-  useEffect(() => {
-    document.getElementById('defaultChecked').focus();
-    document.getElementById('defaultTextChecked').focus();
-  }, [])
+  const changeDisplayTab = (e) => {
+    document.getElementById(displayTab).classList.remove('display-active')
+    setDisplayTab(e.target.id)
+    e.target.classList.add('display-active')
+  }
+
+  const changeTabChoice = (e) => {
+    document.getElementById(tabChoice).classList.remove('tab-choice-active')
+    setTabChoice(e.target.id)
+    e.target.classList.add('tab-choice-active')
+  }
 
   return (
     <>
       {/* Logo */}
+      <div id="logo" className="position-relative text-center">Clova</div>
       <Container
         className="position-relative"
-        style={{ marginTop: '200px' }}
       >
         {/* <Image src="" /> */}
         <div
@@ -44,10 +52,38 @@ const HomePage = () => {
 
         {/* Category Button */}
         <Row className="mt-5 mb-4 button-container">
-          <Button id='defaultChecked' className="custom-button" title="General OCR">General OCR</Button>
-          <Button className="custom-button" title="Receipts">Receipts</Button>
-          <Button className="custom-button" title="Credit Cards">Credit Cards</Button>
-          <Button className="custom-button" title="Business Licenses">Business Licenses</Button>
+          <Button
+            id="ocr"
+            className="custom-button"
+            title="General OCR"
+            onClick={(e) => changeTabChoice(e)}
+          >
+            General OCR
+          </Button>
+          <Button
+            id="receipt"
+            className="custom-button"
+            title="Receipts"
+            onClick={(e) => changeTabChoice(e)}
+          >
+            Receipts
+          </Button>
+          <Button
+            id="credit"
+            className="custom-button"
+            title="Credit Cards"
+            onClick={(e) => changeTabChoice(e)}
+          >
+            Credit Cards
+          </Button>
+          <Button
+            id="business"
+            className="custom-button"
+            title="Business Licenses"
+            onClick={(e) => changeTabChoice(e)}
+          >
+            Business Licenses
+          </Button>
         </Row>
 
         {/* Category Description */}
@@ -75,26 +111,29 @@ const HomePage = () => {
               style={{ borderBottom: '1px solid silver' }}
             >
               <button 
-                id="defaultTextChecked"
+                id="text"
                 className="body-button pl-3"
-                onClick={() => setIsText(true)} title="Text"
+                onClick={(e) => changeDisplayTab(e)}
+                title="Text"
               >
                 Text
               </button>
               <button
+                id="json"
                 className="body-button pl-3"
-                onClick={() => setIsText(false)} title="Json"
+                onClick={(e) => changeDisplayTab(e)}
+                title="Json"
               >
                 Json
               </button>
             </Row>
 
             {/* Content */}
-            <Row><Body isText={isText} /></Row>
+            <Row><Body displayTab={displayTab} /></Row>
 
             {/* Copy/ Upload Button */}
             <Row className="mr-0">
-              <CopyButton isText={isText} />
+              <CopyButton displayTab={displayTab} />
               <UploadButton />
             </Row>
           </Col>

@@ -1,5 +1,11 @@
+#logo {
+  font-size: 50px;
+  color: #fff;
+  margin-top: 50px;
+}
+
 .desc-text {
-  margin-top: 84px;
+  margin-top: 20px;
   font-size: 0.9rem;
   line-height: 16px;
   letter-spacing: 0;
@@ -40,7 +46,14 @@
   transition: width .15s ease-in-out;
 }
 
-.custom-button:hover, .custom-button:focus, .custom-button:active, .body-button:hover, .body-button:focus, .body-button:active {
+.custom-button:hover, 
+.custom-button:focus, 
+.custom-button:active, 
+.body-button:hover, 
+.body-button:focus, 
+.body-button:active,
+.tab-choice-active,
+.display-active {
  color: #000 !important; 
  background-color: transparent !important;
  border: none !important;
@@ -49,12 +62,17 @@
  outline: none;
 }
 
-.custom-button:hover::after, .custom-button:focus::after, .custom-button:active::after {
+.custom-button:hover::after,
+.custom-button:focus::after,
+.custom-button:active::after, 
+.tab-choice-active::after {
   width: 100%;
   right: 0;
 }
 
-.custom-button::before, .body-button::before {
+.custom-button::before, 
+.body-button::before,
+.tab-choice-active::before {
   display: block;
   content: attr(title);
   font-weight: bold;
